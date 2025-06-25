@@ -210,7 +210,7 @@ for i in pbar:
         args.coef_speed * loss_speed + \
         args.coef_v_pred * loss_v_pred + \
         args.coef_collide * loss_collide + \
-        args.coef_ground_affinity + loss_ground_affinity
+        args.coef_ground_affinity * loss_ground_affinity
 
     if torch.isnan(loss):
         print("loss is nan, exiting...")
